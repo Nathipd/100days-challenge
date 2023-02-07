@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* variáveis */
+:root {
+    --white: rgb(253, 255, 248);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 70vmin;
+    height: 70vmin;
+    border-radius: 1vmin;
+    box-shadow: 1vmin 4vmin 8vmin 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #fff;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    background: linear-gradient(45deg, #433ca0, #4dc2c9);
+
+    position: absolute;
+    z-index: -3;
+}
+
+.number-container {
+    display: flex;
+    transform: translate(-13.5vmin);
+
+    box-shadow: 1vmin 4vmin 8vmin 0 rgba(0, 0, 0, 0.082);
+
+    z-index: -2;
+}
+
+.one {
+    width: 3.5vmin;
+    height: 15vmin;
+
+    background-color: var(--white);
+    border-radius: 0.5vmin;
+
+    box-shadow: -0.1vmin 0.5vmin 1vmin rgba(0, 0, 0, 0.281);
+}
+
+.one::before {
+    content: "";
+
+    width: 3vmin;
+    height: 6vmin;
+
+    background-color: var(--white);
+
+    border-radius: 0.5vmin;
+
+    transform: translate(-2.4vmin) rotate(50deg);
+
+    position: absolute;
+    z-index: -1;
+}
+
+.zero {
+    width: 8vmin;
+    height: 8vmin;
+
+    border-radius: 50vmin;
+    border: 3.5vmin solid var(--white);
+
+    position: absolute;
+    z-index: -1;
+    box-shadow: -0.1vmin 0.5vmin 1vmin rgba(0, 0, 0, 0.226);
+
+    transform: translate(2vmin);
+}
+
+.zero:last-child {
+    transform: translate(15vmin);
+    z-index: -2;
+}
+
+.text-container {
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+}
+
+.days {
+    font-family: 'Courier New', monospace;
+    font-size: 13vmin;
+    font-weight: 600;
+
+    line-height: 11.5vmin;
+    color: var(--white);
+}
+
+.challenge {
+    font-family: 'Courier New', monospace;
+    font-weight: bolder;
+    line-height: 0.5vmin;
+    font-size: 3.85vmin;
+    color: var(--white);
+}
