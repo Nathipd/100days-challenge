@@ -3,12 +3,6 @@
     margin: 0;
 }
 
-/* variáveis */
-:root {
-    --white: rgb(253, 255, 248);
-}
-
-
 body {
     width: 100vw;
     height: 100vh;
@@ -35,23 +29,24 @@ body {
     overflow: hidden;
     background: #272c34;
     color: #333;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 .circle {
     width: 30vmin;
     height: 30vmin;
 
-    display: flex;
-
-    background-color: #7ddffc;
-
     border-radius: 50%;
     position: relative;
 
     overflow: hidden;
+}
+
+.sky {
+	width: 100%;
+	height: 100%;
+	background: #7ddffc;
+
+    position: absolute;
 }
 
 .sun {
@@ -119,14 +114,21 @@ body {
     animation: shadow-animation 5s infinite;
 }
 
+.fade-in {
+	animation: fade-in 5s infinite ;
+} 
 .fade-out {
-    width: 100%;
-    height: 100%;
+	animation: fade-out 5s infinite;
+}
+/* .fade-out {
+    width: 30vmin;
+    height: 30vmin;
     background-color: #272c34;
 
     position: absolute;
+
     animation: fade-out 5s infinite;
-}
+} */
 
 @keyframes shadow-animation {
     0% {
@@ -173,7 +175,7 @@ body {
 
 @keyframes wall-shadow-right {}
 
-@keyframes fade-out {
+/* @keyframes fade-out {
     0% {
         opacity: 0%;
     }
@@ -197,4 +199,28 @@ body {
     100% {
         opacity: 100%;
     }
+} */
+
+@keyframes fade-out {
+	0% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
 }
